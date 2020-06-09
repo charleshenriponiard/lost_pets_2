@@ -1,0 +1,7 @@
+<%= simple_form_for pet do |f| %>
+  <%= f.input :name, placeholder: "Your name", hint:"other things" %>
+  <%= f.input :address, label: "Address" %>
+  <%= f.input :found_on, label: "Found_on" %>
+  <%= f.input :species, collection: Pet::SPECIES, label: "Found_on" %>
+  <%= f.button :submit, class: "btn btn-primary alert alert-danger" %>
+<% end %>

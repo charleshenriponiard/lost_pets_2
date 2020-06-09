@@ -1,0 +1,12 @@
+<h1>Pets</h1>
+<%= link_to "Create", new_pet_path %>
+
+<% @pets.each do |pet| %>
+  <h2><%= pet.name %></h2>
+  <p><%= pet.address %></p>
+  <p>Lolote was found <%= pet.found_days_ago %> days ago</p>
+  <%= link_to "Supprimer", pet_path(pet), method: :delete, data: { confirm: "Are you sure ?"} %>
+
+  <%= link_to "Voir", pet_path(pet) %>
+<% end %>
+<h2></h2>
